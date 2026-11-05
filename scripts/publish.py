@@ -36,7 +36,7 @@ def tag_exists(repository, tag):
 
 def main():
     image = os.environ["IMAGE"]
-    repo = "kaw393939/is373_ci_cd"
+    repo = "edgaroj52218/is373_ci_cd"
     commit = os.environ["GITHUB_SHA"]
     tested = json.loads(Path(".state/tested-image.json").read_text())
     image_id = output(["docker", "image", "inspect", image, "--format", "{{.Id}}"])
